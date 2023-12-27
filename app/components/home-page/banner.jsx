@@ -12,7 +12,7 @@ export const Banner = () => {
       <div>
         <p className={"text-white font-bold text-[80px]"}>@Foodify shopping</p>
         <p className={"text-white font-bold text-[25px] text-center"}>
-          We provide 100% customer satisfaction
+          We provide 100% customer satisfaction.
         </p>
         <div className={"flex justify-center"}>
           <Link href={"/#produuct_categories"}>

@@ -10,7 +10,7 @@ export const Button = ({ label, type, className, loading, inverse, ...props }) =
           : "bg-primary-100 text-white"
       } ${className ?? ""}`}
     >
-      <span className={"text-sm"}>{loading ? "Loading..." : label}</span>
+      <span>{loading ? "Loading..." : label}</span>
     </button>
   );
 };

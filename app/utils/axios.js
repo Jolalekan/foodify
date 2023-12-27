@@ -25,7 +25,7 @@ if (typeof window !== "undefined") {
 
   Axios.interceptors.response.use(
     (res) => {
-      return res;
+      return res.data;
     },
 
     async (error) => {
