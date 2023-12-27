@@ -11,10 +11,11 @@ export const useLogin = () => {
   const login = useCallback(async (payload) => {
     setLoading(true);
     try {
-      const req = await axios.post("/auth/login", { ...payload });
+      const res = await axios.post("/auth/login", { ...payload });
       setLoading(false);
       setSuccess(true);
-      toast.success(req.data.message);
+      localStorage.setItem("foodify", res.data.data.token);
+      toast.success(res.data.message);
     } catch (error) {
       setLoading(false);
       setSuccess(false);
