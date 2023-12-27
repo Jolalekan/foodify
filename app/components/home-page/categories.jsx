@@ -21,6 +21,7 @@ export const Categories = () => {
               <p className={"mt-5 text-zinc-500 text-[18px] font-bold"}>
                 Categories
               </p>
+              <p className={"text-zinc-500 text-[13px]"}>Select a category</p>
               {categories.results && (
                 <>
                   {loading ? (
@@ -39,8 +40,8 @@ export const Categories = () => {
                                 <Link href={""}>{name}</Link>
                               </p>
                               <p className={"text-zinc-500 text-[14px]"}>
-                                {description.length > 85
-                                  ? `${description.slice(0, 85)}...`
+                                {description.length > 80
+                                  ? `${description.slice(0, 80)}...`
                                   : description}
                               </p>
                             </li>

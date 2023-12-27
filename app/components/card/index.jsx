@@ -24,8 +24,8 @@ export const ShoppingCard = ({
         <p className={"text-[13px] text-zinc-700 mt-3"}>{description}</p>
         <p className={"text-primary-100 font-bold text-[13px] mt-5"}>Price: ₦{price}</p>
         <div className={"flex justify-between mt-4"}>
-          <Button label={"Order now"} style={{ width: "48%" }} className={"py-1 text-[11px] font-bold"} />
-          <Button label={"Add to cart"} style={{ width: "48%" }} className={"py-1 text-[11px] font-bold"} inverse />
+          <Button label={"Order now"} style={{ width: "48%" }} className={"py-1 text-[10px] font-bold"} />
+          <Button label={"Add to cart"} style={{ width: "48%" }} className={"py-1 text-[10px] font-bold"} inverse />
         </div>
       </div>
     </div>

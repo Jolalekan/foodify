@@ -9,22 +9,22 @@ export const Navigation = () => {
         <Container>
           <div
             className={
-              "flex justify-between bg-white w-full px-12 mt-10 rounded-lg border border-zinc-200 py-5"
+              "flex justify-between bg-white w-full px-12 mt-10 rounded-lg border-2 border-zinc-200 py-5"
             }
           >
             <div>
-              <p className={"text-primary-100 font-bold text-[22px]"}>
+              <p className={"text-primary-100 font-bold text-[16px]"}>
                 <Link href={"/"}> Foodify Shopping</Link>
               </p>
             </div>
             <div>
-              <ul className={"flex mt-2"}>
+              <ul className={"flex mt-1"}>
                 {navListConstant.map(({ value, link }, index) => {
                   return (
                     <li
                       key={`nav-${index}`}
                       className={
-                        "px-3 text-sm text-zinc-500 hover:text-primary-100 hover:underline"
+                        "px-2 text-[13px] text-zinc-500 hover:text-primary-100 hover:underline"
                       }
                     >
                       <Link href={link}>{value}</Link>
