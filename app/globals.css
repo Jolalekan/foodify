@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination {
+  display: flex;
+
+  .active {
+    color: white;
+    background: #df080f !important;
+  }
+  .page-item {
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 14px !important;
+  }
+}
