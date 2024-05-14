@@ -1,8 +1,22 @@
+"use client"
+
 import Link from "next/link";
 import { navListConstant } from "../../utils/constant";
 import { Container } from "../container";
+import AuthContext from "../AppContext";
+import { useContext } from "react";
+import { useRouter } from "next/navigation";
 
 export const Navigation = () => {
+  const router = useRouter()
+  const { signOut, auth } = useContext(AuthContext)
+
+  const handleSignOut = () => {
+    signOut()
+    router.push("/login")
+  }
+
+
   return (
     <section>
       <nav className={"w-full fixed z-10"}>
@@ -21,6 +35,7 @@ export const Navigation = () => {
               <ul className={"flex mt-1"}>
                 {navListConstant.map(({ value, link }, index) => {
                   return (
+
                     <li
                       key={`nav-${index}`}
                       className={
@@ -28,10 +43,25 @@ export const Navigation = () => {
                       }
                     >
                       <Link href={link}>{value}</Link>
+
                     </li>
                   );
                 })}
               </ul>
+              <div>
+                {auth ? ( // If logged in (auth exists)
+                  <>
+                  {console.log("login", auth)}
+                    {/* Links or components for logged-in users */}
+                    <button onClick={signOut} >signOut</button>
+                  </>
+                ) : (
+                  <>  {/* If not logged in (auth is null) */}
+                    <Link href="/register">Register</Link>
+                    <Link href="/login">Login</Link>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </Container>
@@ -39,3 +69,4 @@ export const Navigation = () => {
     </section>
   );
 };
+

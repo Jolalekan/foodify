@@ -6,7 +6,7 @@ let axiosInstance;
 
 if (typeof window !== "undefined") {
   axiosInstance = Axios.create({
-    baseURL: process.env.NEXT_PUBLIC_BASE_URL,
+    baseURL: process.env.MONGODB_URI,
     headers: { "Content-Type": "application/json" },
   });
 
